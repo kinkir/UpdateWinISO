@@ -12,7 +12,7 @@ param(
     [string]$AppxRemove = "yes",
     [string]$CapabilitiesRemove = "yes",
     [string]$OnedriveRemove = "yes",
-    [string]$EDGERemove = "yes",
+    [string]$EDGERemove = "no",
     [string]$AIRemove = "yes",
     [string]$TweaksApply = "yes"
 )
