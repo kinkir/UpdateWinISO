@@ -73,16 +73,16 @@ jobs:
         ls     #Directory: D:\a\UpdateWinISO\UpdateWinISO(即仓库目录)
         7z a -v1950M ${{env.FILE_NAME}}-${{env.Build_VERSION}}.7z ../Win_ISO_Patching_Scripts/*.iso -mx=9
 
-    # 上传镜像
-    - uses: actions/upload-artifact@v4
-      with:
-        name: ${{env.FILE_NAME}}-${{env.Build_VERSION}}
-        path: ${{env.FILE_NAME}}-${{env.Build_VERSION}}.7z*
+    # # 上传镜像
+    # - uses: actions/upload-artifact@v4
+    #   with:
+    #     name: ${{env.FILE_NAME}}-${{env.Build_VERSION}}
+    #     path: ${{env.FILE_NAME}}-${{env.Build_VERSION}}.7z*
 
-    # 发布镜像
-    - name: Release
-      uses: softprops/action-gh-release@v2
-      with:
-        tag_name: ${{env.FILE_NAME}}-${{env.Build_VERSION}}
-        release_name: ${{env.FILE_NAME}}-${{env.Build_VERSION}}
-        files: ${{env.FILE_NAME}}-${{env.Build_VERSION}}.7z*
+    # # 发布镜像
+    # - name: Release
+    #   uses: softprops/action-gh-release@v2
+    #   with:
+    #     tag_name: ${{env.FILE_NAME}}-${{env.Build_VERSION}}
+    #     release_name: ${{env.FILE_NAME}}-${{env.Build_VERSION}}
+    #     files: ${{env.FILE_NAME}}-${{env.Build_VERSION}}.7z*
