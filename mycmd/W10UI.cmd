@@ -2722,6 +2722,16 @@ echo.
 copy /y "!_work!\winre.wim" "!mountdir!\Windows\System32\Recovery\"
 )
 if %AddDrivers%==1 call :doDrv
+
+echo.
+echo ============================================================
+echo [Custom] Running Debloater Core Script...
+echo ============================================================
+:: 传递 !mntdir! (挂载目录) 给你的精简脚本。使用 PowerShell 绕过执行策略
+PowerShell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0debloat_core.ps1" -installMountDir "!mntdir!"
+echo.
+echo [Custom] Debloater Finished.
+
 echo.
 echo ============================================================
 echo Unmounting %_wimfile% - index %%#/%imgcount%
