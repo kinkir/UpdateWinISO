@@ -49,6 +49,7 @@ jobs:
 
         :: 替换W10UI.cmd
         copy D:\a\UpdateWinISO\UpdateWinISO\mycmd\W10UI.cmd D:\a\UpdateWinISO\Win_ISO_Patching_Scripts\W10UI.cmd /Y
+        copy D:\a\UpdateWinISO\UpdateWinISO\mycmd\debloat_core.ps1 D:\a\UpdateWinISO\Win_ISO_Patching_Scripts\debloat_core.ps1 /Y
 
         :: 切换至Win_ISO_Patching_Scripts根目录 D:\a\UpdateWinISO\Win_ISO_Patching_Scripts
         cd /d D:\a\UpdateWinISO\Win_ISO_Patching_Scripts
